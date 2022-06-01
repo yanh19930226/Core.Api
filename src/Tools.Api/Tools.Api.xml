@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tools.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Tools.Api.Controllers.ExcelController">
+            <summary>
+            Excel
+            </summary>
+        </member>
+        <member name="M:Tools.Api.Controllers.ExcelController.UpLoadExcel(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            UpLoadExcel
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tools.Api.Controllers.MongoController">
+            <summary>
+            Mongo
+            </summary>
+        </member>
+        <member name="M:Tools.Api.Controllers.MongoController.FetData(Tools.Api.Dtos.MongoSearchDto)">
+            <summary>
+            GetData
+            </summary>
+            <param name="mongoSearchDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tools.Api.Controllers.MongoController.FetDataPage(Tools.Api.Dtos.SearchPage)">
+            <summary>
+            FetDataPage
+            </summary>
+            <param name="mongoSearchDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tools.Api.Dtos.MongoSearchDto">
+            <summary>
+            搜索类
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Dtos.MongoSearchDto.SearchStr">
+            <summary>
+            SearchStr
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Dtos.MongoSearchDto.CompanyId">
+            <summary>
+            公司Id
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Dtos.MongoSearchDto.ShopId">
+            <summary>
+            店铺Id
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Dtos.MongoSearchDto.AccountId">
+            <summary>
+            账号Id
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Dtos.MongoSearchDto.AccountName">
+            <summary>
+            账号名称
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Dtos.MongoSearchDto.Agent">
+            <summary>
+            代理商
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Dtos.MongoSearchDto.StartTime">
+             <summary>
+            开始时间
+             </summary>
+        </member>
+        <member name="P:Tools.Api.Dtos.MongoSearchDto.EndTime">
+             <summary>
+            结束时间
+             </summary>
+        </member>
+        <member name="T:Tools.Api.Dtos.SearchPage">
+            <summary>
+            搜索类
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.SubTitle">
+            <summary>
+            SubTitle
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.LinkUrl">
+            <summary>
+            LinkUrl
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Desc">
+            <summary>
+            Desc
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.SeoTitle">
+            <summary>
+            SeoTitle
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.SeoDesc">
+            <summary>
+            SeoDesc
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.SeoKeyWord">
+            <summary>
+            SeoKeyWord
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.ProductShelf">
+            <summary>
+            ProductShelf
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Logistic">
+            <summary>
+            Logistic
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.ProductFee">
+            <summary>
+            ProductFee
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.VirtualNum">
+            <summary>
+            VirtualNum
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.FollowStock">
+            <summary>
+            FollowStock
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.StockRule">
+            <summary>
+            FollowStock
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.EditionName">
+            <summary>
+            EditionName
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Label">
+            <summary>
+            Label
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.SupName">
+            <summary>
+            SupName
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.SupUrl">
+            <summary>
+            SupUrl
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Attr">
+            <summary>
+            Attr
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Style">
+            <summary>
+            Style
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Color">
+            <summary>
+            Color
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Size">
+            <summary>
+            Size
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Price">
+            <summary>
+            Price
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.OldPrice">
+            <summary>
+            OldPrice
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Sku">
+            <summary>
+            Sku
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Weight">
+            <summary>
+            Weight
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Unit">
+            <summary>
+            Unit
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.BarCode">
+            <summary>
+            BarCode
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.ProductStock">
+            <summary>
+            ProductStock
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.ImageUrl">
+            <summary>
+            ImageUrl
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.FirstCategary">
+            <summary>
+            FirstCategary
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.SecondCategary">
+            <summary>
+            SecondCategary
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.ProductCategary">
+            <summary>
+            ProductCategary
+            </summary>
+        </member>
+        <member name="P:Tools.Api.Models.Excel.ExcelDto.Spu">
+            <summary>
+            Spu
+            </summary>
+        </member>
+        <member name="T:Tools.Api.Services.MongoSettings">
+            <summary>
+            Mongo配置
+            </summary>
+        </member>
+        <member name="M:Tools.Api.Services.MongoService.FetDataPage(Tools.Api.Dtos.SearchPage,MongoDB.Driver.SortDefinition{Tools.Api.Models.Mongos.AdvertiseFee})">
+            <summary>
+            分页查询集合
+            </summary>
+            <param name="filter">查询条件</param>
+            <param name="pageIndex">当前页</param>
+            <param name="pageSize">页容量</param>
+            <param name="count">总条数</param>
+            <param name="field">要查询的字段,不写时查询全部</param>
+            <param name="sort">要排序的字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tools.Api.Util.StreamToBytes(System.IO.Stream)">
+            <summary>
+            StreamToBytes
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

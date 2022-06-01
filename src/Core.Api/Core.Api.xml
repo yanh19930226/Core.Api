@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Core.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Core.Api.Controllers.CacheController">
+            <summary>
+             Cache
+            </summary>
+        </member>
+        <member name="M:Core.Api.Controllers.CacheController.Set">
+            <summary>
+            设置缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Api.Controllers.CacheController.Get">
+            <summary>
+            获取缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Core.Api.Controllers.RedisController">
+            <summary>
+             Redis消息队列
+            </summary>
+        </member>
+        <member name="M:Core.Api.Controllers.RedisController.Get">
+             <summary>
+            Redis基本Ge测试
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Core.Api.Controllers.RedisController.Set">
+             <summary>
+            Redis基本Set测试
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Core.Api.Controllers.RedisController.Send">
+            <summary>
+            Redis消息队列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Core.Api.Controllers.TestMq">
+            <summary>
+            测试消息模型
+            </summary>
+        </member>
+        <member name="P:Core.Api.Controllers.TestMq.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Core.Api.Controllers.TestMq.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="T:Core.Api.Controllers.RepositoryController">
+            <summary>
+             Repository
+            </summary>
+        </member>
+        <member name="P:Core.Api.Startup.Env">
+            <summary>
+            web环境
+            </summary>
+        </member>
+        <member name="M:Core.Api.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            Autofac
+            </summary>
+            <param name="builder"></param>
+        </member>
+    </members>
+</doc>

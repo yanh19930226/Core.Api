@@ -1,0 +1,94 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                var w = $("#wd").val();
+                var h = $("#hg").val();
+                var text = $("#tx").val();
+                $.ajax({
+                    url: "/Str/QRcode",
+                    data: "text=" + text + "&width=" + w + "&height=" + h,
+                    success: function (e) {
+                        alert(e);
+                    }
+                });
+            });
+
+            $("#btnajax").click(function () {
+                $.ajax({
+                    'url': "http://usertest.66in.net/api/CustOrder/GetCustOrderPageList",
+                    'type': "Post",
+                    'dataType': "json",
+                    'contentType': "application/json; charset=utf-8",
+                    'async': true,
+                    'success': function (data) {
+                        debugger;
+                        console.log(data);
+                    },
+                    'beforeSend': function () {
+                        
+                    },
+                    'complete': function (e) {
+                    }
+                });
+            });
+
+
+            $("#btnajaxzp").click(function () {
+               
+            });
+        });
+
+        function zp() {
+            var data = {
+                "BusinessSettledId": "1111",
+                "OrderIds": ["222", "222"]
+            };
+            $.ajax({
+                'url': "http://usertest.66in.net/api/CustOrder/SetBusinessSettler",
+                'data': JSON.stringify(data),
+                'type': "Post",
+                'dataType': "json",
+                'contentType': "application/json; charset=utf-8",
+                'success': function (data) {
+                    debugger;
+                    console.log(data);
+                },
+                'beforeSend': function () {
+
+                },
+                'complete': function (e) {
+                }
+            });
+        };
+
+
+    </script>
+</head>
+<body>
+
+    <div style="margin-top:20px;margin-left:20px;">
+        <p>高度:<input type="text" style="width:60px;height:32px;border:1px solid #66b1ff;margin-left:3px;" id="wd" /><span style="margin-left:10px;">宽度:</span><input type="text" style="width:60px;height:32px;border:1px solid #66b1ff;margin-left:3px;" id="hg" /></p>
+        <input type="text" style="width:200px;height:32px;border:1px solid #66b1ff;" id="tx" placeholder="请输入字符串..." /><button type="button" class="btn btn-info" id="btn" style="margin-left:5px;margin-top:-1px;height:33px;">提交</button>
+
+        <button type="button" class="btn btn-info"  style="margin-left:5px;margin-top:-1px;height:33px;">ajax</button>
+
+
+        <button type="button" class="btn btn-info"  style="margin-left:5px;margin-top:-1px;height:33px;" onclick="zp()">指派</button>
+    </div>
+
+
+</body>
+</html>
