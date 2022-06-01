@@ -18,9 +18,14 @@ namespace Core.Encryption.Api
         /// <summary>
         /// 参数校验
         /// </summary>
-        private void CheckParams()
+        private void CheckParams(AuthorizationFilterContext context)
         {
-
+            if (!context.HttpContext.Request.Headers.ContainsKey("timestamp"))
+            {
+                context.HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                context.Result = new JsonResult("缺少timestamp参数");
+                return;
+            }
         }
 
         /// <summary>
@@ -95,12 +100,7 @@ namespace Core.Encryption.Api
         /// <param name="context"></param>
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            if (!context.HttpContext.Request.Headers.ContainsKey("timestamp"))
-            {
-                context.HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
-                context.Result = new JsonResult("缺少timestamp参数");
-                return;
-            }
+            
         }
     }
 }
